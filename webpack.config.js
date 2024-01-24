@@ -42,8 +42,22 @@ module.exports = {
         use: [
           // compiles Less to CSS
           "style-loader",
-          "css-loader",
-          'less-loader',
+          // "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+                modules:true
+            }
+          },
+          // 'less-loader',
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              },
+            },
+          },
         ],
       },
     ],

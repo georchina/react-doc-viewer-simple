@@ -12,7 +12,7 @@ class Index extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount () {
     const { index } = this.state;
     const { attachments } = this.props;
     if (attachments && attachments.length > 0) {
@@ -20,16 +20,16 @@ class Index extends React.Component {
     }
   }
 
-  downloadAttachment = async url => {
+  downloadAttachment = async (url, title) => {
     const { beforeDownload } = this.props;
     if (beforeDownload) {
       const res = await beforeDownload();
       if (!res.errSms) {
-        const { url: downloadUrl, fileName } = await fetchDownload(url, 'GET');
+        const { url: downloadUrl, fileName } = await fetchDownload(url, title, 'GET');
         downloadFile(downloadUrl, fileName);
       }
     } else {
-      const { url: downloadUrl, fileName } = await fetchDownload(url, 'GET');
+      const { url: downloadUrl, fileName } = await fetchDownload(url, title, 'GET');
       downloadFile(downloadUrl, fileName);
     }
   }
@@ -103,7 +103,7 @@ class Index extends React.Component {
     return (
       <Row>
         <Row className={styles.attachmentHeader}>
-          <Col span={12}><Button onClick={() => this.downloadAttachment(current.url)} icon='download' shape="round">Download</Button></Col>
+          <Col span={12}><Button onClick={() => this.downloadAttachment(current.url, current.title)} icon='download' shape="round">Download</Button></Col>
           <Col span={12}>
             <Row type='flex' justify='end' align='middle' gutter={10}>
               {extra?
