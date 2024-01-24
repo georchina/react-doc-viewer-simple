@@ -1,8 +1,8 @@
 # react wrapped simple file preview component, support pdf, word, ppt, xlsx, picture preview.
 
 ## Use
-```npm i react-doc-viewer-simple``.
-```import DocViewer from 'react-doc-viewer-simple';```
+```npm i react-doc-viewer-simple```
+```import DocViewer from 'react-doc-viewer-simple```
 ```<DocViewer
     attachments={[{title: 'xxx.pdf', url: 'your url'}]}
     // extra={extraComponent}
@@ -18,7 +18,7 @@ Also support minHeight, toolbar parameters to customize the minimum height and w
 
 ## 使用
 ```npm i react-doc-viewer-simple```
-```import DocViewer from 'react-doc-viewer-simple';```
+```import DocViewer from 'react-doc-viewer-simple```
 ```<DocViewer
     attachments={[{title: 'xxx.pdf', url: 'your url'}]}
     // extra={extraComponent}
