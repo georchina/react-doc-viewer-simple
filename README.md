@@ -7,10 +7,10 @@
 
 ```jsx
 <DocViewer
-    attachments={[{title: 'xxx.pdf', url: 'your url'}]}
-    // extra={extraComponent}
-    // beforeDownload={this.beforeDownload}
-  />
+  attachments={[{title: 'xxx.pdf', url: 'your url'}]}
+  // extra={extraComponent}
+  // beforeDownload={this.beforeDownload}
+/>
 ```
 
 You can pass in extra to customize the extra component, and pass in beforeDownload method to customize the behavior before download.
@@ -28,10 +28,10 @@ Also support minHeight, toolbar parameters to customize the minimum height and w
 
 ```jsx
 <DocViewer
-    attachments={[{title: 'xxx.pdf', url: 'your url'}]}
-    // extra={extraComponent}
-    // beforeDownload={this.beforeDownload}
-  />
+  attachments={[{title: 'xxx.pdf', url: 'your url'}]}
+  // extra={extraComponent}
+  // beforeDownload={this.beforeDownload}
+/>
 ```
 
 可以传入extra自定义额外组件，传入beforeDownload方法自定义下载前行为。
